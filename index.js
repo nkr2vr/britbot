@@ -6,8 +6,20 @@ client.on('ready', () => {
  });
 
 client.on('message', msg => {
- if (msg.content === 'ping') {
- msg.reply('pong');
+var str = msg.content;
+var rxpat = /oi\s+bruv\s+wots\s+\d+[f|c]/i;
+ if (rxpat.test(str)) {
+   var tmp = str.match(/\d+[f|c]/i);
+   var tmpval = str.match(/\d+/);
+   var unitpatt = /f/i;
+   tmpval = parseInt(tmpval);
+   if (unitpatt.exec(tmp)) { //temperature is fahrenheit
+     msg.reply(tmpval + 'F is ' + (tmpval-32)/1.8 + 'C, innit?');
+   }
+   else { //temperature is celsius
+     msg.reply(tmpval + 'C is ' + ((tmpval*1.8)+32) + 'F, innit?');
+   }
+
  }
  });
 
