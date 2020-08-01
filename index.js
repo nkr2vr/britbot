@@ -1,3 +1,5 @@
+const API_KEY = '';
+
 const Discord = require('discord.js');
  const client = new Discord.Client();
 
@@ -53,4 +55,4 @@ client.on('message', msg => {
 }
 });
 
-client.login('NzM4NzgxNzk0MjMyNTY1ODAw.XyQ6KQ.z4wQuw9NSNncFuPrE1YGGgIYB6o');
+client.login(API_KEY);
