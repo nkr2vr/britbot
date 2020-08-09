@@ -1,4 +1,4 @@
-const API_KEY = 'NzM4NzgxNzk0MjMyNTY1ODAw.XyQ6KQ.DJ0lBFhSBa8s4o94qCirsnXYJVk';
+const API_KEY = '';
 const conversionUtil = require('./conversion.js');
 const Discord = require('discord.js');
 const client = new Discord.Client();
